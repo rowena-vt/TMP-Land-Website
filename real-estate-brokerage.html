@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Estate Brokerage — TMP Land Consultants</title>
+  <meta name="description" content="TMP Land Consultants — real estate brokerage across hotels, apartment blocks, industrial, PBSA, BTR, strategic land and more." />
+  <link rel="icon" type="image/png" href="logo.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .asset-detail {
+      padding: 5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .asset-detail:last-child { border-bottom: none; }
+    .asset-detail-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .asset-detail-inner.reverse { direction: rtl; }
+    .asset-detail-inner.reverse > * { direction: ltr; }
+    .asset-detail-image {
+      aspect-ratio: 16/10;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      color: rgba(255,255,255,0.12);
+    }
+    .asset-detail-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green-light);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    .asset-detail h2 { color: var(--white); margin-bottom: 1rem; font-size: clamp(1.4rem, 2.5vw, 2rem); }
+    .asset-detail p { color: rgba(255,255,255,0.65); line-height: 1.85; margin-bottom: 1rem; }
+    .asset-detail ul {
+      list-style: none;
+      margin: 1.25rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .asset-detail ul li {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      padding-left: 1.25rem;
+      position: relative;
+    }
+    .asset-detail ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--green-light);
+      font-size: 0.8rem;
+    }
+    @media (max-width: 900px) {
+      .asset-detail-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .asset-detail-inner.reverse { direction: ltr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="nav-logo"><img src="logo.jpeg" alt="TMP Land Consultants" /></a>
+    <nav>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="nav-item active">
+          <a href="real-estate-brokerage.html" class="nav-link has-dropdown">Real Estate Brokerage</a>
+          <ul class="dropdown">
+            <li><a href="#hotels">Hotels</a></li>
+            <li><a href="#apartment-blocks">Apartment Blocks</a></li>
+            <li><a href="#industrial">Industrial</a></li>
+            <li><a href="#portfolio-disposals">Portfolio Disposals</a></li>
+            <li><a href="#pbsa">PBSA</a></li>
+            <li><a href="#consented-developments">Consented Developments</a></li>
+            <li><a href="#strategic-land">Strategic Land</a></li>
+            <li><a href="#offices">Offices</a></li>
+            <li><a href="#btr">BTR</a></li>
+            <li><a href="#transport-logistics">Transport &amp; Logistics</a></li>
+            <li><a href="#international">International Real Estate</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="capital-advisory.html" class="nav-link has-dropdown">Capital Advisory</a>
+          <ul class="dropdown">
+            <li><a href="capital-advisory.html#debt-placement">Debt Placement</a></li>
+            <li><a href="capital-advisory.html#equity-placement">Equity Placement</a></li>
+            <li><a href="capital-advisory.html#development-finance">Development Finance</a></li>
+            <li><a href="capital-advisory.html#investment-structuring">Investment Structuring</a></li>
+            <li><a href="capital-advisory.html#jv-partnerships">JV &amp; Partnerships</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="project-management.html" class="nav-link">Project Management</a></li>
+        <li class="nav-item"><a href="planning-consultancy.html" class="nav-link">Planning &amp; Consultancy</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link cta">Contact Us</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <div class="mobile-nav">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><span class="mobile-toggle">Real Estate Brokerage</span>
+        <ul class="mobile-submenu" style="display:none">
+          <li><a href="#hotels">Hotels</a></li>
+          <li><a href="#apartment-blocks">Apartment Blocks</a></li>
+          <li><a href="#industrial">Industrial</a></li>
+          <li><a href="#portfolio-disposals">Portfolio Disposals</a></li>
+          <li><a href="#pbsa">PBSA</a></li>
+          <li><a href="#consented-developments">Consented Developments</a></li>
+          <li><a href="#strategic-land">Strategic Land</a></li>
+          <li><a href="#offices">Offices</a></li>
+          <li><a href="#btr">BTR</a></li>
+          <li><a href="#transport-logistics">Transport &amp; Logistics</a></li>
+          <li><a href="#international">International Real Estate</a></li>
+        </ul>
+      </li>
+      <li><span class="mobile-toggle">Capital Advisory</span>
+        <ul class="mobile-submenu" style="display:none">
+          <li><a href="capital-advisory.html#debt-placement">Debt Placement</a></li>
+          <li><a href="capital-advisory.html#equity-placement">Equity Placement</a></li>
+          <li><a href="capital-advisory.html#development-finance">Development Finance</a></li>
+          <li><a href="capital-advisory.html#investment-structuring">Investment Structuring</a></li>
+          <li><a href="capital-advisory.html#jv-partnerships">JV &amp; Partnerships</a></li>
+        </ul>
+      </li>
+      <li><a href="project-management.html">Project Management</a></li>
+      <li><a href="planning-consultancy.html">Planning &amp; Consultancy</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <span class="page-hero-tag">Division 01</span>
+      <h1>Real Estate<br>Brokerage</h1>
+      <p>Transactional expertise across all major asset classes — from single assets to complex portfolio disposals — in the UK and internationally.</p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="section-inner">
+      <div style="max-width:800px;" class="fade-up">
+        <span class="section-label">Our Approach</span>
+        <h2 class="section-title">Specialist brokerage across<br>every major asset class</h2>
+        <div class="divider"></div>
+        <p class="section-intro">TMP Land Consultants provides discreet, commercially focused brokerage services for vendors and purchasers across all major real estate asset classes. Our broad market relationships and sector depth allow us to identify the right counterparty and execute efficiently — maximising value at every stage.</p>
+      </div>
+      <!-- Asset nav pills -->
+      <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:3rem;" class="fade-up">
+        <a href="#hotels" class="btn btn-outline" style="padding:0.5rem 1rem;font-size:0.75rem;">Hotels</a>
+        <a href="#apartment-blocks" class="btn btn-outline" style="padding:0.5rem 1rem;font-size:0.75rem;">Apartment Blocks</a>
+        <a href="#industrial" class="btn btn-outline" style="padding:0.5rem 1rem;font-size:0.75rem;">Industrial</a>
+        <a href="#portfolio-disposals" class="btn btn-outline" style="padding:0.5rem 1rem;font-size:0.75rem;">Portfolio Disposals</a>
+        <a href="#pbsa" class="btn btn-outline" style="padding:0.5rem 1rem;font-size:0.75rem;">PBSA</a>
+        <a href="#consented-developments" class="btn btn-outline" style="padding:0.5rem 1rem;font-size:0.75rem;">Consented Developments</a>
+        <a href="#strategic-land" class="btn btn-outline" style="padding:0.5rem 1rem;font-size:0.75rem;">Strategic Land</a>
+        <a href="#offices" class="btn btn-outline" style="padding:0.5rem 1rem;font-size:0.75rem;">Offices</a>
+        <a href="#btr" class="btn btn-outline" style="padding:0.5rem 1rem;font-size:0.75rem;">BTR</a>
+        <a href="#transport-logistics" class="btn btn-outline" style="padding:0.5rem 1rem;font-size:0.75rem;">Transport &amp; Logistics</a>
+        <a href="#international" class="btn btn-outline" style="padding:0.5rem 1rem;font-size:0.75rem;">International</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASSET CLASSES -->
+  <section class="section" style="padding-top:2rem;">
+    <div class="section-inner">
+
+      <div class="asset-detail" id="hotels">
+        <div class="asset-detail-inner fade-up">
+          <div>
+            <span class="asset-detail-tag">Asset Class 01</span>
+            <h2>Hotels</h2>
+            <p>TMP advises on the acquisition and disposal of hotel assets across all segments — from boutique independents to large branded full-service hotels. We understand the operational nuances of hotel real estate and provide advice that reflects both property value and trading performance.</p>
+            <ul>
+              <li>Single asset and portfolio transactions</li>
+              <li>Branded and unbranded hotel investments</li>
+              <li>Conversion and rebranding opportunities</li>
+              <li>Development site identification for hotel use</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-arrow" style="margin-top:1rem;">Enquire Now</a>
+          </div>
+          <div class="asset-detail-image">🏨</div>
+        </div>
+      </div>
+
+      <div class="asset-detail" id="apartment-blocks">
+        <div class="asset-detail-inner reverse fade-up">
+          <div>
+            <span class="asset-detail-tag">Asset Class 02</span>
+            <h2>Apartment Blocks</h2>
+            <p>We act for vendors and purchasers of residential apartment blocks, from standing stock to newly completed developments. Our network spans institutional investors, private equity and high-net-worth individuals seeking income-producing or value-add residential assets.</p>
+            <ul>
+              <li>Completed block sales and acquisitions</li>
+              <li>Forward funding and forward sale structures</li>
+              <li>Mixed tenure and mixed-use schemes</li>
+              <li>Affordable housing components</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-arrow" style="margin-top:1rem;">Enquire Now</a>
+          </div>
+          <div class="asset-detail-image">🏬</div>
+        </div>
+      </div>
+
+      <div class="asset-detail" id="industrial">
+        <div class="asset-detail-inner fade-up">
+          <div>
+            <span class="asset-detail-tag">Asset Class 03</span>
+            <h2>Industrial</h2>
+            <p>Industrial and logistics real estate continues to attract strong investor demand. TMP advises across the full spectrum — from urban last-mile facilities to large-format distribution warehouses — bringing both occupier and investment market insight to every instruction.</p>
+            <ul>
+              <li>Industrial estates and multi-let schemes</li>
+              <li>Big box logistics and distribution warehouses</li>
+              <li>Urban last-mile and city logistics</li>
+              <li>Industrial land and development sites</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-arrow" style="margin-top:1rem;">Enquire Now</a>
+          </div>
+          <div class="asset-detail-image">🏭</div>
+        </div>
+      </div>
+
+      <div class="asset-detail" id="portfolio-disposals">
+        <div class="asset-detail-inner reverse fade-up">
+          <div>
+            <span class="asset-detail-tag">Asset Class 04</span>
+            <h2>Portfolio Disposals</h2>
+            <p>Complex portfolio transactions require specialist coordination and deep buyer relationships. TMP manages portfolio sales processes from initial strategy through to completion — ensuring competitive tension and maximum value recovery for our clients.</p>
+            <ul>
+              <li>Whole portfolio and tranche sales</li>
+              <li>Mixed-use and mixed-asset portfolios</li>
+              <li>Structured sale processes and off-market transactions</li>
+              <li>Portfolio valuation and positioning advice</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-arrow" style="margin-top:1rem;">Enquire Now</a>
+          </div>
+          <div class="asset-detail-image">📦</div>
+        </div>
+      </div>
+
+      <div class="asset-detail" id="pbsa">
+        <div class="asset-detail-inner fade-up">
+          <div>
+            <span class="asset-detail-tag">Asset Class 05</span>
+            <h2>PBSA</h2>
+            <p>Purpose-Built Student Accommodation remains one of the most resilient and sought-after alternative real estate sectors. TMP has established strong relationships with both operators and investors and provides brokerage services across development sites, forward deals and standing stock.</p>
+            <ul>
+              <li>Development site acquisitions for PBSA</li>
+              <li>Forward funding and forward sale agreements</li>
+              <li>Standing PBSA investment sales</li>
+              <li>Operator and investor introductions</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-arrow" style="margin-top:1rem;">Enquire Now</a>
+          </div>
+          <div class="asset-detail-image">🎓</div>
+        </div>
+      </div>
+
+      <div class="asset-detail" id="consented-developments">
+        <div class="asset-detail-inner reverse fade-up">
+          <div>
+            <span class="asset-detail-tag">Asset Class 06</span>
+            <h2>Consented Developments</h2>
+            <p>Sites and assets with planning consent represent a distinct investment opportunity. TMP advises on the marketing and disposal of consented development opportunities, understanding how to present and position schemes to achieve the strongest possible outcomes.</p>
+            <ul>
+              <li>Residential and mixed-use consented sites</li>
+              <li>Commercial and hotel development land</li>
+              <li>Phased delivery strategies</li>
+              <li>Deferred payment and overage structures</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-arrow" style="margin-top:1rem;">Enquire Now</a>
+          </div>
+          <div class="asset-detail-image">📋</div>
+        </div>
+      </div>
+
+      <div class="asset-detail" id="strategic-land">
+        <div class="asset-detail-inner fade-up">
+          <div>
+            <span class="asset-detail-tag">Asset Class 07</span>
+            <h2>Strategic Land</h2>
+            <p>Strategic land — sites without current planning consent but with development potential — requires long-term thinking and patient capital. TMP advises landowners, promoters and developers on the identification, promotion and disposal of strategic land opportunities across the UK.</p>
+            <ul>
+              <li>Greenfield and brownfield strategic land</li>
+              <li>Promotion agreements and options</li>
+              <li>Allocation and local plan engagement</li>
+              <li>Land assembly and agricultural land</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-arrow" style="margin-top:1rem;">Enquire Now</a>
+          </div>
+          <div class="asset-detail-image">🌿</div>
+        </div>
+      </div>
+
+      <div class="asset-detail" id="offices">
+        <div class="asset-detail-inner reverse fade-up">
+          <div>
+            <span class="asset-detail-tag">Asset Class 08</span>
+            <h2>Offices</h2>
+            <p>The office market continues to evolve, with occupier requirements shifting towards high-quality, amenity-rich environments. TMP advises on office investment transactions, repositioning opportunities and development sites — with a clear understanding of where occupier demand is heading.</p>
+            <ul>
+              <li>Core and core-plus office investments</li>
+              <li>Value-add and repositioning opportunities</li>
+              <li>Development site and pre-let transactions</li>
+              <li>Flexible and co-working concepts</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-arrow" style="margin-top:1rem;">Enquire Now</a>
+          </div>
+          <div class="asset-detail-image">🏢</div>
+        </div>
+      </div>
+
+      <div class="asset-detail" id="btr">
+        <div class="asset-detail-inner fade-up">
+          <div>
+            <span class="asset-detail-tag">Asset Class 09</span>
+            <h2>Build to Rent (BTR)</h2>
+            <p>BTR has become a mainstream institutional asset class. TMP advises developers, investors and operators across the full BTR lifecycle — from site acquisition through development, forward funding and standing investment disposal.</p>
+            <ul>
+              <li>BTR development site acquisitions</li>
+              <li>Forward funding and equity investment</li>
+              <li>Stabilised BTR investment sales</li>
+              <li>Single-family housing (SFH) BTR</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-arrow" style="margin-top:1rem;">Enquire Now</a>
+          </div>
+          <div class="asset-detail-image">🏘️</div>
+        </div>
+      </div>
+
+      <div class="asset-detail" id="transport-logistics">
+        <div class="asset-detail-inner reverse fade-up">
+          <div>
+            <span class="asset-detail-tag">Asset Class 10</span>
+            <h2>Transport &amp; Logistics</h2>
+            <p>Beyond traditional industrial, TMP advises on specialist transport and logistics real estate — including bus depots, EV charging hubs, rail-served facilities and intermodal logistics parks. A growing sector driven by infrastructure investment and the energy transition.</p>
+            <ul>
+              <li>Bus and coach depots</li>
+              <li>EV charging and energy infrastructure sites</li>
+              <li>Rail-connected logistics facilities</li>
+              <li>Intermodal and port-centric logistics</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-arrow" style="margin-top:1rem;">Enquire Now</a>
+          </div>
+          <div class="asset-detail-image">🚛</div>
+        </div>
+      </div>
+
+      <div class="asset-detail" id="international">
+        <div class="asset-detail-inner fade-up">
+          <div>
+            <span class="asset-detail-tag">Asset Class 11</span>
+            <h2>International Real Estate</h2>
+            <p>TMP's network extends beyond the UK, with active relationships across European and international markets. We facilitate cross-border transactions, helping international investors access UK opportunities and UK clients access international markets.</p>
+            <ul>
+              <li>Cross-border transaction advisory</li>
+              <li>European and Middle East market access</li>
+              <li>International investor introductions</li>
+              <li>Currency and structuring considerations</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-arrow" style="margin-top:1rem;">Enquire Now</a>
+          </div>
+          <div class="asset-detail-image">🌍</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="background: var(--green-dark);">
+    <div class="section-inner" style="text-align:center;max-width:680px;">
+      <div class="fade-up">
+        <span class="section-label">Work With TMP</span>
+        <h2 class="section-title">Have a transaction<br>in mind?</h2>
+        <div class="divider" style="margin:2rem auto;"></div>
+        <p class="section-intro" style="margin:0 auto 2.5rem;">Whether you are buying, selling or exploring options, our brokerage team is ready to help. Get in touch for a confidential discussion.</p>
+        <a href="contact.html" class="btn btn-primary btn-arrow">Contact Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="logo.jpeg" alt="TMP Land Consultants" />
+          <p>A multi-disciplinary real estate consultancy specialising in brokerage, capital advisory, project management and planning.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="real-estate-brokerage.html">Real Estate Brokerage</a></li>
+            <li><a href="capital-advisory.html">Capital Advisory</a></li>
+            <li><a href="project-management.html">Project Management</a></li>
+            <li><a href="planning-consultancy.html">Planning &amp; Consultancy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Asset Classes</h5>
+          <ul>
+            <li><a href="#hotels">Hotels</a></li>
+            <li><a href="#industrial">Industrial</a></li>
+            <li><a href="#pbsa">PBSA</a></li>
+            <li><a href="#strategic-land">Strategic Land</a></li>
+            <li><a href="#btr">BTR</a></li>
+            <li><a href="#international">International</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+          <br />
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:info@tmpland.co.uk">info@tmpland.co.uk</a></li>
+            <li><a href="https://tmpland.co.uk">tmpland.co.uk</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2025 TMP Land Consultants. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="privacy.html">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

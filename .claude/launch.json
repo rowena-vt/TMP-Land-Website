@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "TMP Land Website",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["/tmp/tmpland-preview/serve.py"],
+      "port": 3000
+    }
+  ]
+}
