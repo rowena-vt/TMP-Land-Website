@@ -523,8 +523,8 @@ p  { font-size: 0.95rem; line-height: 1.8; color: var(--ink-light); }
   font-size: 4rem; color: var(--border);
   overflow: hidden;
 }
-.asset-section h2 { font-size: clamp(1.5rem, 2.5vw, 2.2rem); color: var(--ink); margin-bottom: 1rem; }
-.asset-section p { color: var(--ink-light); line-height: 1.85; margin-bottom: 1rem; }
+.asset-section h2 { font-size: clamp(1.5rem, 2.5vw, 2.2rem); color: var(--ink) !important; margin-bottom: 1rem; }
+.asset-section p { color: var(--ink-light) !important; line-height: 1.85; margin-bottom: 1rem; }
 .bullet-list { display: flex; flex-direction: column; gap: 0.5rem; margin: 1.25rem 0; }
 .bullet-list li { font-size: 0.9rem; color: var(--ink-light); padding-left: 1.25rem; position: relative; }
 .bullet-list li::before { content: '→'; position: absolute; left: 0; color: var(--green); font-size: 0.8rem; }
